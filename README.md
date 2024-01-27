@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/AwlL9kc.jpeg" alt="GataBotLite-MD" width="500"/>
 </p>
 <p align="center">
-<a href="https://github.com/GataNina-Li/GataBot-MD"><img title="GataBot-MD" src="https://img.shields.io/badge/🌸 ESTÁ ES UNA VERSIÓN SIMPLIFICADA DE GataBotMD 🌸 -red?colorA=%233CCED8&colorB=%233CCED8&style=for-the-badge"></a>
+<a href="https://github.com/GataNina-Li/gl"><img title="GataBot-MD" src="https://img.shields.io/badge/🌸 ESTÁ ES UNA VERSIÓN SIMPLIFICADA DE GataBotMD 🌸 -red?colorA=%233CCED8&colorB=%233CCED8&style=for-the-badge"></a>
 </p>
 
 <div align="center">
@@ -36,20 +36,20 @@
 termux-setup-storage
 ```
 ```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget && wget -O - https://raw.githubusercontent.com/GataNina-Li/GataBotLite-MD/master/gatalite.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget && wget -O - https://raw.githubusercontent.com/BotSatMagic/gl/master/gatalite.sh | bash
 ```
 #### EN CASO QUE QUIERA USAR ESTE MÉTODO DEBE DE EDITAR (Previo a una Bifurcación)
-- [`Repositorio`](https://github.com/GataNina-Li/GataBotLite-MD/blob/14da583cddcf76285988dadb76cfc77f9373d8a8/gatalite.sh#L155)
-- [`Nombre del Bot`](https://github.com/GataNina-Li/GataBotLite-MD/blob/14da583cddcf76285988dadb76cfc77f9373d8a8/gatalite.sh#L159)
-- Actualizar: `https://raw.githubusercontent.com/GataNina-Li/GataBotLite-MD/master/gatalite.sh`
+- [`Repositorio`](https://github.com/BotSatMagic/gl/blob/14da583cddcf76285988dadb76cfc77f9373d8a8/gatalite.sh#L155)
+- [`Nombre del Bot`](https://github.com/BotSatMagic/gl/blob/14da583cddcf76285988dadb76cfc77f9373d8a8/gatalite.sh#L159)
+- Actualizar: `https://raw.githubusercontent.com/BotSatMagic/gl/master/gatalite.sh`
 ### 🌼 INSTALACIÓN MANUAL - TERMUX 🌼
 ```bash
 termux-setup-storage
 apt update
 apt upgrade
 pkg install -y git nodejs ffmpeg imagemagick yarn
-git clone https://github.com/GataNina-Li/GataBotLite-MD 
-cd GataBotLite-MD
+git clone https://github.com/BotSatMagic/gl 
+cd gl
 yarn install
 npm install
 npm start
@@ -58,7 +58,7 @@ npm start
 ### 🍁 TERMUX 24/7 🍁 
 > Comandos para realizar una ejecución 24/7
 - INICIAR
-> Use estos comandos dentro de la carpeta GataBotLite-MD
+> Use estos comandos dentro de la carpeta gl
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ```
@@ -68,7 +68,7 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 pm2 stop all && pm2 unstartup
 ```
 - REANUDAR 
-> Reanudar los procesos, usar dentro de la carpeta GataBotLite-MD 
+> Reanudar los procesos, usar dentro de la carpeta gl 
 ```bash
 pm2 start index.js 
 ```
