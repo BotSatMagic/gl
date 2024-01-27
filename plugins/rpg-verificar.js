@@ -22,7 +22,7 @@ let aa = tag + '@s.whatsapp.net'
 let user = global.db.data.users[m.sender]
   
 if (/^(verify|verificar|reg(ister)?)$/i.test(command)) {
-if (user.registered === true) return m.reply(lenguajeGB.smsVerify0(usedPrefix) + '*')
+if (user.registered === false) return m.reply(lenguajeGB.smsVerify0(usedPrefix) + '*')
 if (!Reg.test(text)) return m.reply(lenguajeGB.smsVerify1(usedPrefix, command))
 let [_, name, splitter, age] = text.match(Reg)  
 if (!name) return m.reply(lenguajeGB.smsVerify2())
@@ -97,7 +97,7 @@ nombresIdiomas = `IDIOMA NO DETECTADO`
 }  
 await m.reply(`${lenguajeGB['smsAvisoIIG']()}*EN CASO QUE QUIERA CAMBIAR O ELIMINAR EL IDIOMA DEBE DE ELIMINAR SU REGISTRO PRIMERO*`)
 user.regTime = + new Date
-user.registered = true
+user.registered = false
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)	
 let caption = `${lenguajeGB.smsVerify7()}
 *⎔ IDIOMA* 
